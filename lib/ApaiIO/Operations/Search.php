@@ -164,6 +164,21 @@ class Search extends AbstractOperation
 
         return $this;
     }
+    
+    /**
+     * Sets the sort value for the search
+     * Allows to browse a sorted resultsets.
+     * (View possible values at http://docs.aws.amazon.com/AWSECommerceService/latest/DG/SortingbyPopularityPriceorCondition.html)
+     * 
+     * @param string $sort
+     *
+     * @return \ApaiIO\Operations\Search
+     */
+    public function setSort($sort)
+    {
+        $this->parameter['Sort'] = $sort;
+        return $this;
+    }
 
     /**
      * Validates the given price.
